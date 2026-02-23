@@ -23,8 +23,7 @@ default_model = "claude-sonnet-4-20250514"
 default_temperature = 0.7
 
 [gateway]
-port = 42617
-host = "[::]"
+host = "0.0.0.0"
 allow_public_bind = true
 CONF
 fi

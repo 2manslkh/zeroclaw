@@ -70,7 +70,9 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 ENV ZEROCLAW_WORKSPACE=/zeroclaw-data/workspace
 ENV HOME=/zeroclaw-data
-ENV ZEROCLAW_GATEWAY_PORT=42617
+# NOTE: Do NOT set ZEROCLAW_GATEWAY_PORT here — Railway injects PORT
+# automatically and routes traffic to it. The app falls back to PORT
+# when ZEROCLAW_GATEWAY_PORT is unset (see config/schema.rs).
 
 WORKDIR /zeroclaw-data
 # NOTE: No USER directive — the entrypoint runs as root to fix volume
