@@ -20,9 +20,9 @@
         "default": "openrouter"
       },
       "ZEROCLAW_MODEL": {
-        "description": "Model to use (provider-specific format, e.g. anthropic/claude-sonnet-4-20250514)",
+        "description": "Model to use (provider-specific format, e.g. anthropic/claude-opus-4-6)",
         "required": false,
-        "default": "anthropic/claude-sonnet-4-20250514"
+        "default": "anthropic/claude-opus-4-6"
       },
       "ZEROCLAW_TEMPERATURE": {
         "description": "Model temperature (0.0–2.0)",
