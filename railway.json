@@ -1,0 +1,45 @@
+{
+  "$schema": "https://railway.com/railway.schema.json",
+  "build": {
+    "dockerfilePath": "Dockerfile",
+    "buildTarget": "release"
+  },
+  "deploy": {
+    "startCommand": "zeroclaw gateway",
+    "healthcheckPath": "/health",
+    "healthcheckTimeout": 10,
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 3,
+    "envVars": {
+      "API_KEY": {
+        "description": "LLM provider API key (e.g. OpenRouter, OpenAI, Anthropic)",
+        "required": true
+      },
+      "PROVIDER": {
+        "description": "LLM provider name (openrouter, openai, anthropic, gemini, groq, mistral, deepseek, ollama, etc.)",
+        "required": false,
+        "default": "openrouter"
+      },
+      "ZEROCLAW_MODEL": {
+        "description": "Model to use (provider-specific format, e.g. anthropic/claude-sonnet-4-20250514)",
+        "required": false,
+        "default": "anthropic/claude-sonnet-4-20250514"
+      },
+      "ZEROCLAW_TEMPERATURE": {
+        "description": "Model temperature (0.0–2.0)",
+        "required": false,
+        "default": "0.7"
+      },
+      "ZEROCLAW_ALLOW_PUBLIC_BIND": {
+        "description": "Allow binding to public interfaces (must be true for Railway)",
+        "required": false,
+        "default": "true"
+      },
+      "ZEROCLAW_GATEWAY_HOST": {
+        "description": "Gateway bind address (0.0.0.0 for Railway networking)",
+        "required": false,
+        "default": "0.0.0.0"
+      }
+    }
+  }
+}
