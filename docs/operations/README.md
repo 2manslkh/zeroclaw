@@ -8,6 +8,7 @@ For operators running ZeroClaw in persistent or production-like environments.
 - Release runbook: [../release-process.md](../release-process.md)
 - Troubleshooting matrix: [../troubleshooting.md](../troubleshooting.md)
 - Safe network/gateway deployment: [../network-deployment.md](../network-deployment.md)
+- Railway one-click deploy: [../railway-template-overview.md](../railway-template-overview.md)
 - Mattermost setup (channel-specific): [../mattermost-setup.md](../mattermost-setup.md)
 
 ## Common Flow

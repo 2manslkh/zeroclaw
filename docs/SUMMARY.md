@@ -47,6 +47,7 @@ Last refreshed: **February 18, 2026**.
 - [release-process.md](release-process.md)
 - [troubleshooting.md](troubleshooting.md)
 - [network-deployment.md](network-deployment.md)
+- [railway-template-overview.md](railway-template-overview.md)
 - [mattermost-setup.md](mattermost-setup.md)
 
 ### 4) Security Design & Proposals
