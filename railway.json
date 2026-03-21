@@ -11,17 +11,17 @@
     "envVars": {
       "ANTHROPIC_OAUTH_TOKEN": {
         "description": "Anthropic setup token (run `claude setup-token` in Claude Code to generate one)",
-        "required": true
+        "required": false
       },
       "PROVIDER": {
         "description": "LLM provider name (anthropic, openrouter, openai, gemini, groq, mistral, deepseek, ollama, etc.)",
         "required": false,
-        "default": "anthropic"
+        "default": "openrouter"
       },
       "ZEROCLAW_MODEL": {
         "description": "Model to use (e.g. claude-sonnet-4-20250514, claude-opus-4-6)",
         "required": false,
-        "default": "claude-sonnet-4-20250514"
+        "default": "hunter alpha"
       },
       "ZEROCLAW_TEMPERATURE": {
         "description": "Model temperature (0.0–2.0)",
