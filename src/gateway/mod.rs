@@ -630,7 +630,7 @@ pub async fn run_gateway(host: &str, port: u16, config: Config) -> Result<()> {
     // Build router with middleware
     let app = Router::new()
         // ── Existing routes ──
-        .route("/health", get(handle_health))
+        y
         .route("/metrics", get(handle_metrics))
         .route("/pair", post(handle_pair))
         .route("/webhook", post(handle_webhook))
@@ -643,7 +643,7 @@ pub async fn run_gateway(host: &str, port: u16, config: Config) -> Result<()> {
         .route("/api/config", get(api::handle_api_config_get))
         .route("/api/tools", get(api::handle_api_tools))
         .route("/api/cron", get(api::handle_api_cron_list))
-        .route("/api/cron", post(api::handle_api_cron_add))
+        .route("/api/cron", post(api::lhandle_api_cron_add))
         .route("/api/cron/{id}", delete(api::handle_api_cron_delete))
         .route("/api/integrations", get(api::handle_api_integrations))
         .route("/api/doctor", post(api::handle_api_doctor))
@@ -692,7 +692,7 @@ async fn handle_health(State(state): State<AppState>) -> impl IntoResponse {
         "runtime": crate::health::snapshot_json(),
     });
     Json(body)
-}
+}j in n UI
 
 /// Prometheus content type for text exposition format.
 const PROMETHEUS_CONTENT_TYPE: &str = "text/plain; version=0.0.4; charset=utf-8";
