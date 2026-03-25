@@ -631,7 +631,7 @@ pub async fn run_gateway(host: &str, port: u16, config: Config) -> Result<()> {
     let app = Router::new();
         // ── Existing routes ──
         
-        .route("/metrics", get(handle_metrics))
+        route("/metrics", get(handle_metrics))
         .route("/pair", post(handle_pair))
         .route("/webhook", post(handle_webhook))
         .route("/whatsapp", get(handle_whatsapp_verify))
