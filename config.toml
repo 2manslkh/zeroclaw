@@ -1,0 +1,4 @@
+[channels_config.telegram]
+bot_token = "TELEGRAM_BOT_TOKEN"
+allowed_identities = ["caseysbeka"]
+enabled = true
